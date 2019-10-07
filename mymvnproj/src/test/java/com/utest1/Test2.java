@@ -12,7 +12,7 @@ public class Test2
 	   @Test
 	   public void testSalutationMessage() {
 	      System.out.println("Inside testSalutationMessage()");
-	      message = "Hi!" + "Robert";
+	      message = "Robert";
 	      assertEquals(message,messageUtil.printMessage());
 	   }
 }

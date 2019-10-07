@@ -24,7 +24,7 @@ public class DBValidateTest
 	  public void getrecordsTest() throws Exception
 	  {
 		  
-		Mockito.when(di.find_pubid_titles("0736")).thenReturn(false);
+		Mockito.when(di.find_pubid_titles("0736")).thenReturn(true);
 		assertEquals(true,d1.get_titles_pubid("0736"));	 
 	    Mockito.verify(di).find_pubid_titles("0736");
 	  }

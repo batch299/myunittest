@@ -4,24 +4,40 @@
   <artifactId>mymvnproj</artifactId>
   <version>1.0</version>
   <dependencies>
-  <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.12</version>
-    <scope>test</scope>
-   </dependency>
-  <dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-core</artifactId>
-    <version>2.28.1</version>
-    <scope>test</scope>
-  </dependency>
-  <dependency>
-    <groupId>com.microsoft.sqlserver.jdbc</groupId>
-    <artifactId>sqljdbc</artifactId>
-    <version>4.0</version>
-  </dependency>  
-  </dependencies>
+	  <dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	    <scope>test</scope>
+	   </dependency>
+	  <dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>2.28.1</version>
+	    <scope>test</scope>
+	  </dependency>
+	  <dependency>
+	    <groupId>com.microsoft.sqlserver.jdbc</groupId>
+	    <artifactId>sqljdbc</artifactId>
+	    <version>4.0</version>
+	    <scope>system</scope>
+        <systemPath>${basedir}/src/Lib/sqljdbc-4.0.jar</systemPath>
+	  </dependency>  
+   </dependencies>
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<compilerVersion>1.6</compilerVersion>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		 </plugins>
+ 	</build>
   <reporting>
 	<plugins>
 		<plugin>
